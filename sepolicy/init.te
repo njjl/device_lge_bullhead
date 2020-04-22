@@ -21,7 +21,7 @@ allow init sysfs_rfkill0:dir { search read open };
 allow init sysfs_rfkill0:file { read open write getattr setattr };
 allow init sysfs_rfkill0:lnk_file rw_file_perms;
 
-allow init sysfs:file { setattr getattr };
+allow init sysfs:file { open write setattr getattr };
 
 # allow: write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
 allow init sysfs_msm_subsys:dir { search read open };
@@ -46,3 +46,4 @@ allow init persist_file:dir mounton;
 allow init firmware_file:dir mounton;
 
 allow init sysfs_leds:file rw_file_perms;
+allow init sysfs_leds:lnk_file { r_file_perms };

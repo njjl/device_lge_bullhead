@@ -3,3 +3,4 @@ allow hal_light_default sysfs_backlight:file rw_file_perms;
 allow hal_light_default sysfs_qpnp_25:dir search;
 allow hal_light_default sysfs_qpnp_25:file rw_file_perms;
 allow hal_light_default sysfs_leds:file rw_file_perms;
+allow hal_light_default hal_light_default:capability { dac_override };
